@@ -49,3 +49,7 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
 - No des por terminado tu trabajo sin verificar: `docker compose up` levanta
   desde un estado limpio y la CI pasa en verde. Si algo falla y no puedes
   resolverlo, repórtalo tal cual en tu respuesta final.
+- Cierra tu respuesta final con una sección **"Pasos pendientes del usuario"**
+  listando todo lo que requiere su cuenta o autorización (crear el repo en
+  GitHub y hacer push, activar Pages, crear el servicio en Railway/Render,
+  etc.), en orden y copiable. Si no queda nada pendiente, dilo explícitamente.
