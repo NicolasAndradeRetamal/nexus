@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Equipo de agentes especializados (orquestador, arquitecto, disenador, backend, frontend, devops, reviewer, qa) + HUD de sesión estilo Starcraft",
   "author": {
-    "name": "Nicolás Anan",
-    "email": "nicolasanan@hotmail.com"
+    "name": "Nicolás Andrade",
+    "email": "nicolasandraderetamal@hotmail.com"
   },
   "keywords": ["agents", "team", "statusline", "starcraft", "workflow"]
 }

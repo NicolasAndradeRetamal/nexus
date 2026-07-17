@@ -12,7 +12,7 @@ convenciones del equipo, y un HUD de sesión inspirado en Starcraft.
 ## Instalación
 
 ```bash
-claude plugin marketplace add <usuario-github>/nexus
+claude plugin marketplace add NicolasAndradeRetamal/nexus
 claude plugin install nexus@nexus
 ```
 

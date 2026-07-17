@@ -2,8 +2,8 @@
   "name": "nexus",
   "description": "Equipo de agentes especializados y HUD estilo Starcraft para Claude Code",
   "owner": {
-    "name": "Nicolás Anan",
-    "email": "nicolasanan@hotmail.com"
+    "name": "Nicolás Andrade",
+    "email": "nicolasandraderetamal@hotmail.com"
   },
   "plugins": [
     {
