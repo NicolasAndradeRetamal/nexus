@@ -2,7 +2,7 @@
 name: frontend
 description: Implementa la interfaz de usuario, componentes, estados y conexión con la API según el stack del proyecto. Usar proactivamente cuando la tarea toque UI, componentes o consumo de APIs desde el cliente.
 tools: Read, Edit, Write, Bash, Grep, Glob, Skill
-model: inherit
+model: sonnet
 color: cyan
 ---
 

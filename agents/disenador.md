@@ -2,7 +2,7 @@
 name: disenador
 description: Define la identidad visual y la experiencia de usuario, paleta, tipografía, tokens de diseño y componentes base. Usar antes de construir cualquier UI nueva.
 tools: Read, Grep, Glob, Write, Edit, Bash
-model: inherit
+model: sonnet
 color: pink
 ---
 

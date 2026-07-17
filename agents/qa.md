@@ -2,7 +2,7 @@
 name: qa
 description: Valida el funcionamiento real de la aplicación, prueba flujos completos, casos borde y errores esperados, y documenta los resultados. Usar antes de dar por terminada una feature o publicar.
 tools: Read, Bash, Grep, Glob, Write
-model: inherit
+model: sonnet
 color: yellow
 memory: project
 ---

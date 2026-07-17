@@ -2,7 +2,7 @@
 name: backend
 description: Implementa la API, la lógica de negocio, los modelos de datos y la autenticación según el stack del proyecto. Usar proactivamente cuando la tarea toque endpoints, servicios, persistencia o seguridad de servidor.
 tools: Read, Edit, Write, Bash, Grep, Glob, Skill
-model: inherit
+model: sonnet
 color: green
 ---
 

@@ -2,7 +2,7 @@
 name: orquestador
 description: Coordina el equipo de agentes especializados (arquitecto, disenador, backend, frontend, devops, reviewer, qa) para construir proyectos completos. Usar para arrancar un proyecto desde cero o para features grandes que involucren varias capas.
 tools: Agent(nexus:arquitecto, nexus:disenador, nexus:backend, nexus:frontend, nexus:devops, nexus:reviewer, nexus:qa), Read, Grep, Glob, TaskCreate, TaskUpdate, TaskList, AskUserQuestion
-model: inherit
+model: opus
 color: purple
 ---
 

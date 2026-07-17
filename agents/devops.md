@@ -2,7 +2,7 @@
 name: devops
 description: Configura entorno de desarrollo, Docker, variables de entorno, CI/CD y documentación de despliegue. Usar cuando haya que integrar servicios, contenerizar, configurar pipelines o preparar el despliegue.
 tools: Read, Edit, Write, Bash, Grep, Glob
-model: inherit
+model: sonnet
 color: orange
 ---
 

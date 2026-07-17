@@ -2,7 +2,7 @@
 name: arquitecto
 description: Define arquitectura, estructura de carpetas, modelo de datos, versiones exactas e interfaces entre capas antes de escribir código. Usar siempre al inicio de un proyecto o de una feature grande.
 tools: Read, Grep, Glob, Bash, Write
-model: inherit
+model: opus
 color: blue
 ---
 

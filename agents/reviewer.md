@@ -2,7 +2,7 @@
 name: reviewer
 description: Revisa código en busca de bugs, problemas de seguridad, rendimiento y legibilidad, y verifica que se sigan las convenciones del proyecto. Usar proactivamente después de cualquier cambio de código.
 tools: Read, Grep, Glob, Bash
-model: inherit
+model: opus
 color: red
 memory: project
 ---
