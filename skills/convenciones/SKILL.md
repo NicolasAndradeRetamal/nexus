@@ -29,6 +29,16 @@ del stack del proyecto.
   TS camelCase); los **DTOs/JSON** de la API siguen el suyo (normalmente
   camelCase). No fuerces snake_case fuera de la BD.
 
+## Comentarios en el código
+
+- Pocos y breves: comenta solo cuando el *por qué* no sea obvio leyendo el
+  código. Una línea basta; nada de bloques JSDoc para describir lo evidente.
+- Nunca narres *qué* hace la línea siguiente ni *para qué* se usa un elemento
+  en otro lugar — eso lo dice el propio código o su uso.
+- Nunca cites documentos ni secciones en comentarios (`DESIGN.md §9.3`,
+  `ARCHITECTURE.md`, tickets): los documentos cambian y el comentario queda
+  obsoleto. Las referencias a documentos van en commits o PRs, no en el código.
+
 ## Git y commits
 
 - Un commit = un cambio lógico. Commits pequeños y atómicos.
