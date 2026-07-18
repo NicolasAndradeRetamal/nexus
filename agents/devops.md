@@ -50,8 +50,11 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
 - En proyectos frontend-only, docker puede no ser necesario; en ese caso
   asegura scripts npm claros y el pipeline de CI.
 - No des por terminado tu trabajo sin verificar: `docker compose up` levanta
-  desde un estado limpio y la CI pasa en verde. Si algo falla y no puedes
-  resolverlo, repórtalo tal cual en tu respuesta final.
+  desde un estado limpio, la CI pasa en verde, y el README contiene **todas**
+  las secciones del esqueleto — Demo y guía de despliegue incluidas (con
+  placeholders marcados como pendientes si aún no hay URL, pero la sección
+  debe existir). Si algo falla y no puedes resolverlo, repórtalo tal cual en
+  tu respuesta final.
 - Cierra tu respuesta final con una sección **"Pasos pendientes del usuario"**
   listando todo lo que requiere su cuenta o autorización (crear el repo en
   GitHub y hacer push, activar Pages, crear el servicio en Railway/Render,
