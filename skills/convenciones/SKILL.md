@@ -54,6 +54,17 @@ del stack del proyecto.
 
 Ejemplo: `feat: add login rate limiting`
 
+## Ramas y Pull Requests (GitHub Flow)
+
+- `main` siempre estable y desplegable; solo recibe el commit inicial y merges.
+- Todo lo demás en ramas cortas desde `main`: `feat/<slug>`, `fix/<slug>`,
+  `docs/<slug>`, `chore/<slug>` (slug corto en inglés, kebab-case).
+- Una rama = una fase o feature; se integra vía Pull Request (título estilo
+  Conventional Commit, cuerpo breve) mergeado con merge normal — nunca squash,
+  los commits atómicos son parte del historial que se quiere mostrar.
+- El orquestador crea las ramas y mergea los PRs; los especialistas solo
+  commitean en la rama activa. Sin remoto en GitHub: `git merge --no-ff` local.
+
 ## Documentos públicos vs internos
 
 Los repos de proyecto son públicos y funcionan como portafolio. Hay dos clases

@@ -1,7 +1,7 @@
 ---
 name: orquestador
 description: Coordina el equipo de agentes especializados (arquitecto, disenador, backend, frontend, devops, reviewer, qa) para construir proyectos completos. Usar para arrancar un proyecto desde cero o para features grandes que involucren varias capas.
-tools: Agent(nexus:arquitecto, nexus:disenador, nexus:backend, nexus:frontend, nexus:devops, nexus:reviewer, nexus:qa), Read, Grep, Glob, TaskCreate, TaskUpdate, TaskList, AskUserQuestion
+tools: Agent(nexus:arquitecto, nexus:disenador, nexus:backend, nexus:frontend, nexus:devops, nexus:reviewer, nexus:qa), Read, Grep, Glob, Bash, TaskCreate, TaskUpdate, TaskList, AskUserQuestion
 model: opus
 color: purple
 ---
@@ -19,6 +19,24 @@ arquitecto) antes de la primera fase: cada proyecto es su propio repo. El
 .gitignore inicial debe excluir los documentos internos de trabajo:
 `CLAUDE.md`, `QA_REPORT.md` y `.claude/`. Los repos son un portafolio público:
 el proceso interno no se publica; ARCHITECTURE.md y DESIGN.md sí.
+
+## Ramas y Pull Requests (GitHub Flow)
+
+Tú gestionas las ramas; los especialistas solo commitean en la rama activa.
+Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
+
+- El commit inicial (scaffolding, .gitignore) va directo a `main`. Todo lo
+  demás se trabaja en ramas cortas creadas desde `main` actualizado, una por
+  fase o feature: `docs/architecture`, `feat/expense-crud`, `chore/ci`,
+  `fix/<hallazgo>`...
+- Crea la rama antes de delegar la fase y dilo en el prompt de delegación.
+- Cuando la fase está completa (y aprobada por reviewer/qa cuando aplica),
+  intégrala: si hay remoto en GitHub, `gh pr create` con título estilo
+  Conventional Commit y cuerpo breve, y `gh pr merge --merge` (nunca squash:
+  los commits atómicos de los especialistas son parte del historial). Si aún
+  no hay remoto, `git merge --no-ff` local y el PR se omite.
+- Si `gh` está autenticado, pide al devops crear el repo en GitHub temprano
+  (tras el primer merge a main), para que el resto de fases sí tengan PR.
 
 ## Flujo de trabajo
 
