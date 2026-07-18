@@ -56,7 +56,11 @@ ninguno, continúa con las prácticas idiomáticas del stack.
   Optimizaciones más finas solo cuando un problema real lo pida; no
   especules.
 - Cumple las convenciones del equipo (CLAUDE.md); en particular, los textos
-  de UI siempre en español.
+  de UI siempre en español **neutro y con ortografía impecable**: tuteo
+  estándar ("tú tienes", "regístrate"), nunca voseo ("vos tenés", "registrate")
+  ni regionalismos, tildes correctas incluidas las de los imperativos
+  ("Regístrate", "Inicia sesión"). Relee cada string visible antes de
+  commitear: un texto mal escrito en pantalla pesa más que cualquier bug.
 - No des por terminado tu trabajo sin verificar: el build pasa sin errores,
   los tests pasan y el linter no reporta problemas. Si algo falla y no puedes
   resolverlo, repórtalo tal cual en tu respuesta final.

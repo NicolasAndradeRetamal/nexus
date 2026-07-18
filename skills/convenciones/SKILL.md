@@ -11,7 +11,9 @@ del stack del proyecto.
 ## Idiomas
 
 - Código, identificadores y comentarios: **inglés**
-- Textos de UI: **español**
+- Textos de UI: **español neutro** — tuteo estándar ("tú tienes",
+  "regístrate"), nunca voseo ni regionalismos, ortografía y tildes impecables
+  (incluidos imperativos: "Regístrate", "Inicia sesión")
 - Documentación generada (README, ARCHITECTURE.md, DESIGN.md, QA_REPORT.md, etc.): **español**
 
 ## Bases de datos relacionales
@@ -64,6 +66,19 @@ Ejemplo: `feat: add login rate limiting`
   los commits atómicos son parte del historial que se quiere mostrar.
 - El orquestador crea las ramas y mergea los PRs; los especialistas solo
   commitean en la rama activa. Sin remoto en GitHub: `git merge --no-ff` local.
+
+## Gestor de paquetes JS/TS
+
+- **pnpm, no npm** (`pnpm install`, `pnpm run <script>`, `pnpm dlx` en vez de
+  `npx`). Motivos: bloquea por defecto los scripts de instalación de las
+  dependencias (mitiga ataques de supply chain vía postinstall), node_modules
+  estricto sin dependencias fantasma, y es más rápido.
+- Si una dependencia legítima necesita ejecutar su script de build (raro),
+  autorízala explícitamente con `pnpm approve-builds` — nunca desactives la
+  protección global.
+- En CI usa `pnpm/action-setup` + `pnpm install --frozen-lockfile`.
+- Proyectos existentes con `package-lock.json` siguen en npm hasta que se
+  migren a propósito; no mezcles lockfiles.
 
 ## Documentos públicos vs internos
 

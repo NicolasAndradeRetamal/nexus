@@ -34,7 +34,7 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
    - **Stack** — tecnologías y versiones principales.
    - **Features** — lista corta de lo que la app hace.
    - **Cómo levantarlo** — clonar, configurar .env, `docker compose up` (o
-     scripts npm), en pasos copiables.
+     scripts pnpm), en pasos copiables.
    - **Tests** — cómo correrlos.
    - **Arquitectura y diseño** — enlaces a ARCHITECTURE.md y DESIGN.md.
 
@@ -48,7 +48,8 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
 - Cumple las convenciones del equipo (CLAUDE.md): documentación en español,
   commits propios pequeños y atómicos (`chore:`, `docs:`, `fix:`...).
 - En proyectos frontend-only, docker puede no ser necesario; en ese caso
-  asegura scripts npm claros y el pipeline de CI.
+  asegura scripts pnpm claros y el pipeline de CI (`pnpm/action-setup` +
+  `pnpm install --frozen-lockfile`).
 - No des por terminado tu trabajo sin verificar: `docker compose up` levanta
   desde un estado limpio, la CI pasa en verde, y el README contiene **todas**
   las secciones del esqueleto — Demo y guía de despliegue incluidas (con
