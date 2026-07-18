@@ -64,6 +64,10 @@ Ejemplo: `feat: add login rate limiting`
 - Una rama = una fase o feature; se integra vía Pull Request (título estilo
   Conventional Commit, cuerpo breve) mergeado con merge normal — nunca squash,
   los commits atómicos son parte del historial que se quiere mostrar.
+- El cuerpo del PR se escribe en lenguaje llano, como lo escribiría cualquier
+  dev del equipo: qué cambia y por qué, en una o dos frases simples. Nada de
+  términos técnicos innecesarios ni jerga académica que el lector promedio
+  no entiende.
 - El orquestador crea las ramas y mergea los PRs; los especialistas solo
   commitean en la rama activa. Sin remoto en GitHub: `git merge --no-ff` local.
 
