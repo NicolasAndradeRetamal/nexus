@@ -54,6 +54,19 @@ del stack del proyecto.
 
 Ejemplo: `feat: add login rate limiting`
 
+## Documentos públicos vs internos
+
+Los repos de proyecto son públicos y funcionan como portafolio. Hay dos clases
+de documentos:
+
+- **Internos** (no se suben; van en el .gitignore inicial): `CLAUDE.md`,
+  `QA_REPORT.md` y `.claude/`. Siguen existiendo en el disco y el equipo los
+  usa con normalidad; simplemente no viajan en el repo.
+- **Públicos** (sí se suben): `README.md`, `ARCHITECTURE.md`, `DESIGN.md`.
+  Escríbelos para un lector externo: hablan de la implementación y sus
+  decisiones, nunca del proceso — sin mencionar agentes, IA, CLAUDE.md ni
+  QA_REPORT.md, y sin frases como "el agente frontend implementará".
+
 ## Calidad
 
 - Documentar decisiones importantes; preguntar antes de decisiones grandes

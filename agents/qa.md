@@ -26,7 +26,8 @@ código — eso es de reviewer.
 4. Verifica los endpoints directamente (curl o el cliente HTTP del stack)
    contra el contrato de ARCHITECTURE.md.
 5. Documenta los resultados en QA_REPORT.md (en español) en la raíz del
-   proyecto, con esta estructura:
+   proyecto. Es un documento interno: está en el .gitignore y no se commitea.
+   Estructura:
    - **Entorno** — cómo se levantó la app, versiones, fecha.
    - **Flujos probados** — cada uno con su resultado (✅/❌).
    - **Bugs** — pasos exactos para reproducir, resultado esperado, resultado

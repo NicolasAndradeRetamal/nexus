@@ -15,7 +15,10 @@ Lee el CLAUDE.md del proyecto actual. Ahí está el stack, el alcance y las
 convenciones. Todas tus delegaciones deben mencionar explícitamente ese stack.
 
 Si el proyecto aún no es un repositorio git, inicialízalo (o pídeselo al
-arquitecto) antes de la primera fase: cada proyecto es su propio repo.
+arquitecto) antes de la primera fase: cada proyecto es su propio repo. El
+.gitignore inicial debe excluir los documentos internos de trabajo:
+`CLAUDE.md`, `QA_REPORT.md` y `.claude/`. Los repos son un portafolio público:
+el proceso interno no se publica; ARCHITECTURE.md y DESIGN.md sí.
 
 ## Flujo de trabajo
 
