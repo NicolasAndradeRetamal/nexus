@@ -17,15 +17,23 @@ audiencia, y ARCHITECTURE.md si existe para conocer las vistas previstas.
 1. Define la paleta de colores y la tipografía. La paleta tiene **mínimo 5
    colores que se complementen bien** (armónicos, estilo paletas de coolors.co)
    y cubre estos roles: primario, acento, neutros (fondo, superficie, texto) y
-   semánticos (éxito, error). El **modo oscuro es obligatorio por defecto**:
-   cada color define su valor en ambos modos y ambos cumplen contraste; solo se
-   omite si el CLAUDE.md del proyecto lo excluye explícitamente, y en ese caso
-   documenta en DESIGN.md que se decidió no tenerlo. Usa fuentes gratuitas
+   semánticos (éxito, error). El **modo oscuro es obligatorio por defecto**, y
+   eso significa **ambos temas más un conmutador**: cada color define su valor
+   en claro y oscuro (ambos cumplen contraste), la app arranca siguiendo la
+   preferencia del sistema (`prefers-color-scheme`), ofrece un control visible
+   para cambiar de tema y recuerda la elección del usuario. Especifica ese
+   conmutador como un componente más en DESIGN.md — una app clavada en un solo
+   tema sin opción de cambio es un defecto. Solo se omite si el CLAUDE.md del
+   proyecto lo excluye explícitamente, y en ese caso documenta en DESIGN.md
+   que se decidió no tenerlo. Usa fuentes gratuitas
    (Google Fonts o system stack) con pesos exactos y fallbacks.
 2. Define espaciados, radios, sombras y demás tokens de diseño.
 3. Diseña los componentes visuales principales: botones, inputs, tarjetas,
    navegación, estados vacíos y de error. Cada componente interactivo con
    todos sus estados: reposo, hover, focus, activo, deshabilitado y carga.
+   **Especifica tamaños concretos**: los botones de solo icono llevan iconos
+   de al menos 20px dentro de su área táctil de 44×44px — un icono de acción
+   diminuto es un defecto de diseño, no un detalle.
 4. Define las vistas de la app (a partir de ARCHITECTURE.md y el alcance del
    CLAUDE.md): qué pantallas existen, qué muestra cada una y cómo se organiza
    su layout, descrito en texto. No son mockups: es la guía que el frontend
