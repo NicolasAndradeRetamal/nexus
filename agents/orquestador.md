@@ -32,9 +32,11 @@ Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
 - Crea la rama antes de delegar la fase y dilo en el prompt de delegación.
 - Cuando la fase está completa (y aprobada por reviewer/qa cuando aplica),
   intégrala: si hay remoto en GitHub, `gh pr create` con título estilo
-  Conventional Commit y cuerpo breve, y `gh pr merge --merge` (nunca squash:
-  los commits atómicos de los especialistas son parte del historial). Si aún
-  no hay remoto, `git merge --no-ff` local y el PR se omite.
+  Conventional Commit y cuerpo breve, y `gh pr merge --merge --delete-branch`
+  (nunca squash: los commits atómicos de los especialistas son parte del
+  historial). Si aún no hay remoto, `git merge --no-ff` local. Tras integrar,
+  borra también la rama local (`git branch -d`): las ramas viven lo que vive
+  su PR; el historial queda en los PRs mergeados, no en ramas muertas.
 - Si `gh` está autenticado, pide al devops crear el repo en GitHub temprano
   (tras el primer merge a main), para que el resto de fases sí tengan PR.
 

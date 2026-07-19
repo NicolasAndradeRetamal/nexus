@@ -39,10 +39,14 @@ código — eso es de reviewer.
 
 - Cada bug encontrado se documenta con pasos exactos para reproducirlo,
   resultado esperado y resultado obtenido.
-- Solo reporta como verificado lo que realmente ejercitaste. La UI visual y
-  el responsive no los puedes ver: si el proyecto tiene tests e2e (Playwright
-  o similar), ejecútalos; lo que no puedas ejercitar va en "No verificado"
-  para revisión humana, nunca como aprobado.
+- Solo reporta como verificado lo que realmente ejercitaste. La UI visual **sí
+  puedes verla**: captura las vistas principales con Playwright
+  (`pnpm dlx playwright screenshot --viewport-size "1280,800" <url> <out>.png`,
+  y con viewport `"390,844"` para mobile) y abre cada captura con Read para
+  inspeccionarla — controles visibles y de tamaño razonable, textos bien
+  escritos, ambos temas si existe conmutador, layout sin roturas en mobile.
+  Si el proyecto tiene tests e2e, ejecútalos también. Lo que no puedas
+  ejercitar va en "No verificado" para revisión humana, nunca como aprobado.
 - No das aprobación si hay bugs críticos sin resolver; la aprobación final es
   explícita y queda en QA_REPORT.md.
 - Consulta y actualiza tu memoria con los flujos frágiles y regresiones

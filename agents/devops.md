@@ -27,6 +27,8 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
    Excepción: si `gh auth status` muestra sesión activa, puedes crear el repo
    de GitHub (`gh repo create <nombre> --public --source . --push`) y activar
    Pages con `gh api`; verifica el resultado antes de reportarlo como hecho.
+   Al crear el repo, activa el borrado automático de ramas mergeadas:
+   `gh api -X PATCH repos/<owner>/<repo> -f delete_branch_on_merge=true`.
 5. Escribe o completa el README.md siguiendo esta estructura:
    - **Título + una frase** de qué hace la app.
    - **Demo**: URL de la app desplegada y captura de pantalla (si aún no

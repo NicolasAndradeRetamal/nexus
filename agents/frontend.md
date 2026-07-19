@@ -64,6 +64,15 @@ ninguno, continúa con las prácticas idiomáticas del stack.
 - No des por terminado tu trabajo sin verificar: el build pasa sin errores,
   los tests pasan y el linter no reporta problemas. Si algo falla y no puedes
   resolverlo, repórtalo tal cual en tu respuesta final.
+- **Verifica visualmente lo que construyes — tienes ojos, úsalos.** Tras
+  implementar o cambiar UI, levanta la app, captura las vistas afectadas con
+  Playwright (`pnpm dlx playwright screenshot --viewport-size "1280,800" <url> <out>.png`;
+  instala el navegador con `pnpm dlx playwright install chromium` si falta) y
+  **abre cada captura con Read** para mirarla de verdad. Compara contra
+  DESIGN.md: ubicaciones, tamaños (¿ese icono se ve bien o quedó minúsculo?),
+  jerarquía, y ambos temas si hay conmutador (captura en claro y en oscuro).
+  Un frontend que nunca vio su pantalla renderizada no puede afirmar que está
+  bien hecha.
 - Commitea tu propio trabajo siguiendo las convenciones de commits del equipo:
   commits pequeños y atómicos (`feat:`, `fix:`, `test:`...), no un único
   commit gigante al final.
