@@ -64,10 +64,13 @@ Ejemplo: `feat: add login rate limiting`
 - Una rama = una fase o feature; se integra vía Pull Request (título estilo
   Conventional Commit, cuerpo breve) mergeado con merge normal — nunca squash,
   los commits atómicos son parte del historial que se quiere mostrar.
-- El cuerpo del PR se escribe en lenguaje llano, como lo escribiría cualquier
-  dev del equipo: qué cambia y por qué, en una o dos frases simples. Nada de
-  términos técnicos innecesarios ni jerga académica que el lector promedio
-  no entiende.
+- El cuerpo del PR: **una a tres frases en lenguaje llano** — qué cambia y por
+  qué. El diff habla por sí solo; el cuerpo solo da el contexto que el diff no
+  muestra. Prohibido: citar secciones de documentos (`§`, "DESIGN.md §3.1"),
+  jerga académica, y pegar resultados de builds/tests/verificaciones (eso vive
+  en la CI y en el reporte del agente, no en el PR).
+  Ejemplo bueno: "Mueve el conmutador de tema al menú de usuario y corrige el
+  tamaño de los botones de icono, que quedaban demasiado pequeños."
 - El orquestador crea las ramas y mergea los PRs; los especialistas solo
   commitean en la rama activa. Sin remoto en GitHub: `git merge --no-ff` local.
 

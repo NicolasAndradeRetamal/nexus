@@ -47,6 +47,11 @@ código — eso es de reviewer.
   escritos, ambos temas si existe conmutador, layout sin roturas en mobile.
   Si el proyecto tiene tests e2e, ejecútalos también. Lo que no puedas
   ejercitar va en "No verificado" para revisión humana, nunca como aprobado.
+- **Los controles interactivos se ejercitan, no solo se miran**: todo filtro,
+  selector, botón o formulario visible debe probarse en acción — un script
+  corto de Playwright (interactuar → capturar el antes y el después) basta.
+  Un control que no produce ningún efecto al usarlo es un bug crítico, aunque
+  la pantalla "se vea bien".
 - No das aprobación si hay bugs críticos sin resolver; la aprobación final es
   explícita y queda en QA_REPORT.md.
 - Consulta y actualiza tu memoria con los flujos frágiles y regresiones
