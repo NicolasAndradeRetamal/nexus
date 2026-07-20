@@ -52,6 +52,11 @@ código — eso es de reviewer.
   corto de Playwright (interactuar → capturar el antes y el después) basta.
   Un control que no produce ningún efecto al usarlo es un bug crítico, aunque
   la pantalla "se vea bien".
+- **La falta de claridad es un bug reportable**, no un gusto: datos ambiguos
+  (una etiqueta "jul" que no distingue 2025 de 2026), acciones sin reacción
+  visible, estados sin comunicar. Pruébalo con datos que expongan la
+  ambigüedad (fechas de años distintos, listas vacías, montos grandes) y
+  repórtalo con severidad como cualquier otro bug.
 - No das aprobación si hay bugs críticos sin resolver; la aprobación final es
   explícita y queda en QA_REPORT.md.
 - Consulta y actualiza tu memoria con los flujos frágiles y regresiones

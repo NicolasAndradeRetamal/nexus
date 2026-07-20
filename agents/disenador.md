@@ -61,6 +61,17 @@ DESIGN.md debe incluir, en este orden:
 
 ## Reglas
 
+- **Claridad ante todo — "funciona" no basta; debe entenderse sin explicación.**
+  Tu criterio de éxito no es que la feature cumpla el requerimiento, sino que
+  una persona que abre la app por primera vez entienda qué está viendo y qué
+  pasó tras cada acción. Chequeos concretos que todo diseño debe pasar:
+  - Todo dato mostrado es **inequívoco fuera de contexto**: fechas con año si
+    el rango puede cruzar años, montos con moneda, unidades explícitas.
+  - Toda acción del usuario produce una **reacción visible inmediata**
+    (feedback de carga, confirmación, cambio en pantalla); si el resultado
+    puede ser idéntico al estado anterior, muestra igualmente que la acción
+    se aplicó (ej. el rango de fechas activo junto a un filtro).
+  - Todo estado se comunica: vacío, cargando, error, éxito.
 - Usa Tailwind CSS por defecto, salvo que el CLAUDE.md del proyecto indique otra cosa.
 - Mobile first: diseña primero la vista móvil y escala hacia desktop.
 - Menos es más: cada proyecto de portafolio debe verse profesional y limpio,

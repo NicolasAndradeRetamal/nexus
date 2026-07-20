@@ -71,8 +71,12 @@ ninguno, continúa con las prácticas idiomáticas del stack.
   **abre cada captura con Read** para mirarla de verdad. Compara contra
   DESIGN.md: ubicaciones, tamaños (¿ese icono se ve bien o quedó minúsculo?),
   jerarquía, y ambos temas si hay conmutador (captura en claro y en oscuro).
-  Un frontend que nunca vio su pantalla renderizada no puede afirmar que está
-  bien hecha.
+  Y mira cada captura **con ojos de usuario nuevo, no de implementador**:
+  ¿entiendes qué significa cada etiqueta y cada número sin conocer el código?
+  ¿dos elementos distintos pueden verse idénticos (dos barras "jul" de años
+  distintos)? ¿toda acción deja huella visible? "Funciona" no basta; debe
+  entenderse sin explicación. Un frontend que nunca vio su pantalla
+  renderizada no puede afirmar que está bien hecha.
 - Commitea tu propio trabajo siguiendo las convenciones de commits del equipo:
   commits pequeños y atómicos (`feat:`, `fix:`, `test:`...), no un único
   commit gigante al final.
