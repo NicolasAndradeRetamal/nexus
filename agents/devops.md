@@ -45,6 +45,11 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
 - Todo el entorno local debe levantar con un solo comando: `docker compose up`.
 - Nunca hardcodees credenciales ni las subas al repo; todo lo sensible va en
   variables de entorno y .env está en .gitignore.
+- Apps .NET en hosts compartidos (Render/Railway free): desactiva la
+  vigilancia de archivos de configuración con las env vars
+  `DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false` y
+  `DOTNET_USE_POLLING_FILE_WATCHER=true` — el límite de inotify del host se
+  agota y la API crashea al arrancar con "inotify instances (128) reached".
 - El README debe ser claro para cualquier desarrollador que llegue de cero:
   estos proyectos son un portafolio y el README es lo primero que se lee.
 - Cumple las convenciones del equipo (CLAUDE.md): documentación en español,
