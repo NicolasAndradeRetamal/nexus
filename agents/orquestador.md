@@ -32,10 +32,16 @@ Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
   fase o feature: `docs/architecture`, `feat/expense-crud`, `chore/ci`,
   `fix/<hallazgo>`...
 - Crea la rama antes de delegar la fase y dilo en el prompt de delegación.
-- El cuerpo del PR: **una a tres frases en lenguaje llano** — qué cambia y por
-  qué, como lo contaría un dev a otro. El diff habla por sí solo. Prohibido:
-  citar secciones de documentos (`§`, "DESIGN.md §3.1"), jerga técnica
-  innecesaria, y pegar resultados de builds/tests/verificaciones.
+- El cuerpo del PR tiene un formato duro: **máximo tres frases corridas, sin
+  listas, sin encabezados, sin secciones, máximo ~50 palabras**. Qué cambia y
+  por qué; el detalle vive en los commits y el diff. Prohibido: `§`, citar
+  secciones de documentos, desglose por capas (Backend/Frontend/Tests), y
+  resultados de builds o verificaciones. Antes de crear el PR, relee tu
+  cuerpo: si tiene una viñeta o un encabezado, reescríbelo desde cero.
+  Ejemplo del formato completo:
+  "Agrega presupuestos mensuales por categoría con barras de progreso y
+  alertas al 80% y al superar el límite. Migración aditiva, no toca datos
+  existentes."
 - Cuando la fase está completa (y aprobada por reviewer/qa cuando aplica),
   intégrala: si hay remoto en GitHub, `gh pr create` con título estilo
   Conventional Commit y cuerpo breve, y `gh pr merge --merge --delete-branch`
