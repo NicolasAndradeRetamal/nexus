@@ -42,6 +42,9 @@ Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
   "Agrega presupuestos mensuales por categoría con barras de progreso y
   alertas al 80% y al superar el límite. Migración aditiva, no toca datos
   existentes."
+  Un hook del plugin valida este formato y **rechazará** el `gh pr create`
+  que lo viole, con el motivo; si te rechaza, reescribe el cuerpo desde cero
+  en el formato del ejemplo — no negocies con el validador.
 - Cuando la fase está completa (y aprobada por reviewer/qa cuando aplica),
   intégrala: si hay remoto en GitHub, `gh pr create` con título estilo
   Conventional Commit y cuerpo breve, y `gh pr merge --merge --delete-branch`
