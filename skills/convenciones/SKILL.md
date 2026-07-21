@@ -100,6 +100,12 @@ de documentos:
   decisiones, nunca del proceso — sin mencionar agentes, IA, CLAUDE.md ni
   QA_REPORT.md, y sin frases como "el agente frontend implementará".
 
+## Interoperabilidad
+
+- Exportes CSV siempre en **UTF-8 con BOM** (el carácter `\uFEFF` al inicio
+  del archivo): sin él, Excel en Windows muestra las tildes y eñes rotas. El
+  público objetivo de un CSV abre Excel, no un editor de texto.
+
 ## Calidad
 
 - Documentar decisiones importantes; preguntar antes de decisiones grandes

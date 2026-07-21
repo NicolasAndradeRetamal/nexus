@@ -74,8 +74,10 @@ ninguno, continúa con las prácticas idiomáticas del stack.
   Y mira cada captura **con ojos de usuario nuevo, no de implementador**:
   ¿entiendes qué significa cada etiqueta y cada número sin conocer el código?
   ¿dos elementos distintos pueden verse idénticos (dos barras "jul" de años
-  distintos)? ¿toda acción deja huella visible? "Funciona" no basta; debe
-  entenderse sin explicación. Un frontend que nunca vio su pantalla
+  distintos)? ¿toda acción deja huella visible? ¿algo aparece o desaparece de
+  golpe, sin transición, o algún sub-elemento se ve desproporcionado o con un
+  color que desentona con su componente? "Funciona" no basta; debe entenderse
+  sin explicación y sentirse pulido. Un frontend que nunca vio su pantalla
   renderizada no puede afirmar que está bien hecha.
 - Commitea tu propio trabajo siguiendo las convenciones de commits del equipo:
   commits pequeños y atómicos (`feat:`, `fix:`, `test:`...), no un único

@@ -29,8 +29,9 @@ audiencia, y ARCHITECTURE.md si existe para conocer las vistas previstas.
    (Google Fonts o system stack) con pesos exactos y fallbacks.
 2. Define espaciados, radios, sombras y demás tokens de diseño.
 3. Diseña los componentes visuales principales: botones, inputs, tarjetas,
-   navegación, estados vacíos y de error. Cada componente interactivo con
-   todos sus estados: reposo, hover, focus, activo, deshabilitado y carga.
+   navegación, notificaciones/toasts, modales, estados vacíos y de error.
+   Cada componente interactivo con todos sus estados: reposo, hover, focus,
+   activo, deshabilitado y carga.
    **Especifica tamaños concretos**: los botones de solo icono llevan iconos
    de al menos 20px dentro de su área táctil de 44×44px — un icono de acción
    diminuto es un defecto de diseño, no un detalle.
@@ -72,6 +73,18 @@ DESIGN.md debe incluir, en este orden:
     puede ser idéntico al estado anterior, muestra igualmente que la acción
     se aplicó (ej. el rango de fechas activo junto a un filtro).
   - Todo estado se comunica: vacío, cargando, error, éxito.
+- **Movimiento y micro-interacciones — una UI sin transiciones se siente rota
+  aunque funcione.** Define tokens de movimiento (duraciones 150–250 ms,
+  easing) y especifica la transición de todo lo que aparece, desaparece o
+  cambia de estado: toasts, modales, dropdowns, hovers. Los toasts se
+  especifican completos: entrada/salida animada, auto-cierre (~5 s
+  éxito/info, ~8 s error, con pausa al hover) además de la X siempre
+  disponible.
+- **Armonía interna de cada componente**: los sub-elementos (icono, botón de
+  cierre) se dimensionan en proporción al componente que los contiene y usan
+  colores derivados de su variante semántica — jamás una X gigante en color
+  primario azul dentro de un toast rojo de error. Si un componente tiene
+  variantes (éxito/error/aviso), especifica cada una.
 - Usa Tailwind CSS por defecto, salvo que el CLAUDE.md del proyecto indique otra cosa.
 - Mobile first: diseña primero la vista móvil y escala hacia desktop.
 - Menos es más: cada proyecto de portafolio debe verse profesional y limpio,
