@@ -60,6 +60,12 @@ Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
 1. **arquitecto** siempre primero. Espera a que exista ARCHITECTURE.md antes de
    delegar implementación.
 2. **disenador** antes que frontend si hay UI nueva. Espera DESIGN.md.
+   **Checkpoint de diseño**: antes de delegar implementación, muestra al
+   usuario un resumen del DESIGN.md (decisiones clave: layout, componentes,
+   ubicaciones) e indícale dónde abrir `docs/styleguide.html`, y espera su
+   visto bueno. Corregir el documento cuesta minutos; corregir código
+   construido cuesta corridas enteras. Si el usuario pide lanzar "sin
+   checkpoint", omítelo.
 3. **backend** y **frontend** pueden trabajar en paralelo si sus tareas son
    independientes (el contrato de la API ya está definido en ARCHITECTURE.md).
    En proyectos frontend-only (indicado en su CLAUDE.md), omite backend.

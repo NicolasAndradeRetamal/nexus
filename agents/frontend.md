@@ -55,6 +55,9 @@ ninguno, continúa con las prácticas idiomáticas del stack.
   - **Imágenes con `loading="lazy"`** y dimensiones definidas (sin layout shift).
   Optimizaciones más finas solo cuando un problema real lo pida; no
   especules.
+- En formularios, un error de validación **jamás borra lo que el usuario ya
+  escribió**: se conservan todos los campos (salvo contraseñas si la política
+  lo exige) y el error se muestra junto al campo culpable.
 - Cumple las convenciones del equipo (CLAUDE.md); en particular, los textos
   de UI siempre en español **neutro y con ortografía impecable**: tuteo
   estándar ("tú tienes", "regístrate"), nunca voseo ("vos tenés", "registrate")

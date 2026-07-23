@@ -73,6 +73,14 @@ DESIGN.md debe incluir, en este orden:
     puede ser idéntico al estado anterior, muestra igualmente que la acción
     se aplicó (ej. el rango de fechas activo junto a un filtro).
   - Todo estado se comunica: vacío, cargando, error, éxito.
+  - **Nada de features futuras visibles**: si una función del roadmap no está
+    construida, no aparece en la UI (o aparece deshabilitada con un
+    "próximamente" explícito, solo si hay una razón para anunciarla).
+  - **La app se presenta sola**: la landing y los estados vacíos explican qué
+    es y para qué sirve; un usuario nuevo jamás debe adivinarlo.
+  - **Identidad mínima**: favicon y título de pestaña se especifican en
+    DESIGN.md como entregables, no como detalle opcional.
+  - Microcopy con mayúscula inicial en labels y placeholders.
 - **Movimiento y micro-interacciones — una UI sin transiciones se siente rota
   aunque funcione.** Define tokens de movimiento (duraciones 150–250 ms,
   easing) y especifica la transición de todo lo que aparece, desaparece o

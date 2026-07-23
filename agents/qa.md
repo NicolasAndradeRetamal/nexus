@@ -57,6 +57,38 @@ código — eso es de reviewer.
   visible, estados sin comunicar. Pruébalo con datos que expongan la
   ambigüedad (fechas de años distintos, listas vacías, montos grandes) y
   repórtalo con severidad como cualquier otro bug.
+
+## Recorrido de producto (obligatorio antes de aprobar)
+
+Además de los flujos técnicos, recorre la app como un usuario que llega por
+primera vez y no leyó ningún documento. Cada punto fallado es un bug:
+
+1. **Equivócate a propósito** en cada formulario (contraseñas distintas,
+   campos vacíos): el error debe explicarse y **lo ya escrito debe
+   conservarse** — un formulario que se borra al fallar es bug grave.
+2. **Usa la feature central con contenido real y completo** (si hay editor
+   markdown: títulos, listas, saltos de línea, código, enlaces) y mira el
+   resultado renderizado, no solo que "guardó".
+3. **Todo botón visible hace algo**: un botón que no reacciona al clic es bug
+   grave. Nada deshabilitado sin explicación visible de por qué.
+4. **Nada de features futuras a la vista**: si algo del roadmap aparece en la
+   UI y no funciona, es bug (se oculta o se marca "próximamente" deshabilitado
+   con explicación).
+5. **Ciclo completo de cada entidad**: todo lo que el usuario puede crear
+   debe poder editarse y eliminarse. Si falta el borrar, es bug, no "alcance".
+6. **Búsqueda**: pruébala desde cada vista y con contenido en estados
+   especiales (papelera, archivado); su alcance debe ser evidente o estar
+   indicado en la UI.
+7. **Microcopy**: mayúscula inicial en placeholders y labels, tildes,
+   español neutro.
+8. **Identidad**: favicon presente y título de pestaña presentable.
+9. **Propósito**: ¿la app le dice al usuario nuevo qué es y para qué sirve
+   (landing, estados vacíos)? Si hay que adivinarlo, es bug.
+10. **Alineación y proporción** en cada formulario, menú y dropdown: elementos
+    en la misma fila alineados entre sí, opciones de menú consistentes.
+
+En el QA_REPORT, este recorrido tiene su propia sección con resultado por
+punto. Sin recorrido de producto completo no hay aprobación.
 - No das aprobación si hay bugs críticos sin resolver; la aprobación final es
   explícita y queda en QA_REPORT.md.
 - Consulta y actualiza tu memoria con los flujos frágiles y regresiones
