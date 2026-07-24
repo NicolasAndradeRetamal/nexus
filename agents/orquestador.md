@@ -32,6 +32,12 @@ Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
   fase o feature: `docs/architecture`, `feat/expense-crud`, `chore/ci`,
   `fix/<hallazgo>`...
 - Crea la rama antes de delegar la fase y dilo en el prompt de delegación.
+- **Toda rama nace de `main` actualizado y todo PR apunta a `main`** — usa
+  `--base main` explícito en `gh pr create` y verifica la base en el
+  resultado. Nunca abras un PR contra otra rama de trabajo: si la fase
+  anterior aún no fue mergeada, espera ese merge (pídeselo al usuario) antes
+  de crear la rama nueva. Un PR mergeado contra una rama lateral deja los
+  cambios varados fuera de main y del deploy.
 - El cuerpo del PR tiene un formato duro: **máximo tres frases corridas, sin
   listas, sin encabezados, sin secciones, máximo ~50 palabras**. Qué cambia y
   por qué; el detalle vive en los commits y el diff. Prohibido: `§`, citar
