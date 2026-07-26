@@ -113,4 +113,11 @@ de documentos:
 
 - Documentar decisiones importantes; preguntar antes de decisiones grandes
 - Calidad de portafolio: README claro y app desplegada valen más que features extra
+- **La demo nunca se ve vacía**: quien abre la app desplegada debe encontrar
+  contenido de ejemplo realista en segundos. Sin cuentas, sembrar datos de
+  muestra en la primera visita (vaciables desde la UI). Con cuentas, cuenta de
+  demostración accesible con **un clic desde el login** (botón visible, sin
+  escribir credenciales) y datos de bienvenida para cada usuario nuevo. Un
+  reclutador no se registra ni configura nada: si la primera pantalla está
+  vacía, cierra la pestaña
 - El CLAUDE.md del proyecto activo siempre manda sobre estas reglas si hay conflicto
