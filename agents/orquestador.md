@@ -38,6 +38,9 @@ Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
   anterior aún no fue mergeada, espera ese merge (pídeselo al usuario) antes
   de crear la rama nueva. Un PR mergeado contra una rama lateral deja los
   cambios varados fuera de main y del deploy.
+- **El título del PR va en inglés**, con el mismo formato que un commit
+  (`tipo: asunto en imperativo`) — aunque le hables al usuario en español, el
+  título es parte del historial del repo, no comunicación con él.
 - El cuerpo del PR tiene un formato duro: **máximo tres frases corridas, sin
   listas, sin encabezados, sin secciones, máximo ~50 palabras**. Qué cambia y
   por qué; el detalle vive en los commits y el diff. Prohibido: `§`, citar

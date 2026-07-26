@@ -21,6 +21,14 @@ process.stdin.on('end', () => {
   if (body.length > 450)
     problems.push(`cuerpo de ${body.length} caracteres (máximo ~350)`);
 
+  // Título en inglés: dos o más palabras funcionales del español lo delatan.
+  const t = cmd.match(/--title[= ]+("([\s\S]*?[^\\])"|'([\s\S]*?)')/);
+  const title = t ? (t[2] ?? t[3] ?? '') : '';
+  const es = (title.match(
+    /\b(con|las|los|del|para|sin|una|unos|unas|desde|hacia|sobre|entre|cuando|donde|que|por|al|el|la|en|de|y|o)\b/gi,
+  ) ?? []).length;
+  if (es >= 2) problems.push(`título que parece estar en español ("${title}")`);
+
   if (problems.length === 0) process.exit(0);
 
   console.log(
@@ -29,10 +37,11 @@ process.stdin.on('end', () => {
         hookEventName: 'PreToolUse',
         permissionDecision: 'deny',
         permissionDecisionReason:
-          `Cuerpo de PR rechazado: ${problems.join('; ')}. ` +
-          'Formato obligatorio: máximo tres frases corridas (~50 palabras) en lenguaje llano — ' +
+          `PR rechazado: ${problems.join('; ')}. ` +
+          'Título en inglés con formato de commit (tipo: asunto en imperativo). ' +
+          'Cuerpo en español: máximo tres frases corridas (~50 palabras) en lenguaje llano — ' +
           'qué cambia y por qué. Sin listas, sin encabezados, sin §, sin resultados de builds. ' +
-          'Reescribe el --body y vuelve a intentar.',
+          'Reescribe y vuelve a intentar.',
       },
     }),
   );

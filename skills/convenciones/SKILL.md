@@ -61,9 +61,12 @@ Ejemplo: `feat: add login rate limiting`
 - `main` siempre estable y desplegable; solo recibe el commit inicial y merges.
 - Todo lo demás en ramas cortas desde `main`: `feat/<slug>`, `fix/<slug>`,
   `docs/<slug>`, `chore/<slug>` (slug corto en inglés, kebab-case).
-- Una rama = una fase o feature; se integra vía Pull Request (título estilo
-  Conventional Commit, cuerpo breve) mergeado con merge normal — nunca squash,
-  los commits atómicos son parte del historial que se quiere mostrar.
+- Una rama = una fase o feature; se integra vía Pull Request mergeado con
+  merge normal — nunca squash, los commits atómicos son parte del historial
+  que se quiere mostrar.
+- **El título del PR va en inglés**, mismo formato que un commit
+  (`tipo: asunto en imperativo`, minúscula, sin punto). El cuerpo sí va en
+  español, como el resto de la documentación del repo.
 - El cuerpo del PR: **una a tres frases en lenguaje llano** — qué cambia y por
   qué. El diff habla por sí solo; el cuerpo solo da el contexto que el diff no
   muestra. Prohibido: citar secciones de documentos (`§`, "DESIGN.md §3.1"),
