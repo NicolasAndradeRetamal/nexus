@@ -45,6 +45,11 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
 - Todo el entorno local debe levantar con un solo comando: `docker compose up`.
 - Nunca hardcodees credenciales ni las subas al repo; todo lo sensible va en
   variables de entorno y .env está en .gitignore.
+- **Las migraciones de base de datos se aplican solas en cada despliegue**:
+  encadénalas al build o al arranque del contenedor (`prisma migrate deploy &&
+  next build`, `db.Database.Migrate()` al iniciar, etc.). Un despliegue que
+  depende de que alguien recuerde correr migraciones a mano se rompe en la
+  primera feature que agrega una tabla, y el error aparece lejos de su causa.
 - Apps .NET en hosts compartidos (Render/Railway free): desactiva la
   vigilancia de archivos de configuración con las env vars
   `DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false` y
