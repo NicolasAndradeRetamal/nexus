@@ -57,6 +57,10 @@ código — eso es de reviewer.
   visible, estados sin comunicar. Pruébalo con datos que expongan la
   ambigüedad (fechas de años distintos, listas vacías, montos grandes) y
   repórtalo con severidad como cualquier otro bug.
+- No das aprobación si hay bugs críticos sin resolver; la aprobación final es
+  explícita y queda en QA_REPORT.md.
+- Consulta y actualiza tu memoria con los flujos frágiles y regresiones
+  recurrentes de este proyecto.
 
 ## Recorrido de producto (obligatorio antes de aprobar)
 
@@ -76,20 +80,21 @@ primera vez y no leyó ningún documento. Cada punto fallado es un bug:
    con explicación).
 5. **Ciclo completo de cada entidad**: todo lo que el usuario puede crear
    debe poder editarse y eliminarse. Si falta el borrar, es bug, no "alcance".
-6. **Búsqueda**: pruébala desde cada vista y con contenido en estados
-   especiales (papelera, archivado); su alcance debe ser evidente o estar
-   indicado en la UI.
-7. **Microcopy**: mayúscula inicial en placeholders y labels, tildes,
+6. **Búsqueda**: pruébala desde **todas** las rutas de la app, incluidas las
+   que agrega la fase en curso, y con contenido en estados especiales
+   (papelera, archivado); su alcance debe ser evidente o estar indicado en la
+   UI. Enumera las rutas existentes antes de empezar y recórrelas una por una.
+7. **Los elementos persistentes funcionan en toda ruta**: lo que vive en la
+   barra superior, el menú lateral o cualquier marco compartido (buscador,
+   accesos, menú de usuario) debe funcionar desde **cada** vista. Un control
+   siempre visible que solo sirve en algunas pantallas es un bug.
+8. **Microcopy**: mayúscula inicial en placeholders y labels, tildes,
    español neutro.
-8. **Identidad**: favicon presente y título de pestaña presentable.
-9. **Propósito**: ¿la app le dice al usuario nuevo qué es y para qué sirve
+9. **Identidad**: favicon presente y título de pestaña presentable.
+10. **Propósito**: ¿la app le dice al usuario nuevo qué es y para qué sirve
    (landing, estados vacíos)? Si hay que adivinarlo, es bug.
-10. **Alineación y proporción** en cada formulario, menú y dropdown: elementos
+11. **Alineación y proporción** en cada formulario, menú y dropdown: elementos
     en la misma fila alineados entre sí, opciones de menú consistentes.
 
 En el QA_REPORT, este recorrido tiene su propia sección con resultado por
 punto. Sin recorrido de producto completo no hay aprobación.
-- No das aprobación si hay bugs críticos sin resolver; la aprobación final es
-  explícita y queda en QA_REPORT.md.
-- Consulta y actualiza tu memoria con los flujos frágiles y regresiones
-  recurrentes de este proyecto.
