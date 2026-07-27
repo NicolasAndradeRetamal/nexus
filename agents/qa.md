@@ -39,6 +39,17 @@ código — eso es de reviewer.
 
 - Cada bug encontrado se documenta con pasos exactos para reproducirlo,
   resultado esperado y resultado obtenido.
+- **Los tests unitarios del framework no son verificación visual**: jsdom no
+  arrastra con el mouse, no pinta y no tiene viewport. Si el proyecto no trae
+  automatización de navegador, instálala tú (`pnpm add -D @playwright/test &&
+  pnpm exec playwright install chromium`) — es parte de tu trabajo, no un
+  motivo para saltarte la verificación. Nunca cierres una fase diciendo que
+  nadie ha visto la app en un navegador: el que la ve eres tú.
+- **Ejercita el gancho del proyecto con el mouse de verdad**: si la feature
+  estrella es arrastrar, arrastra (localizando el asa correcta si la hay) y
+  comprueba el resultado en el estado persistido, no solo en pantalla. Si el
+  gancho está deshabilitado en la vista donde abre la app, eso es un bug de
+  producto: repórtalo.
 - Solo reporta como verificado lo que realmente ejercitaste. La UI visual **sí
   puedes verla**: captura las vistas principales con Playwright
   (`pnpm dlx playwright screenshot --viewport-size "1280,800" <url> <out>.png`,
