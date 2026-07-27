@@ -54,7 +54,11 @@ código — eso es de reviewer.
   puedes verla**: captura las vistas principales con Playwright
   (`pnpm dlx playwright screenshot --viewport-size "1280,800" <url> <out>.png`,
   y con viewport `"390,844"` para mobile) y abre cada captura con Read para
-  inspeccionarla — controles visibles y de tamaño razonable, textos bien
+  inspeccionarla. **En móvil no basta con capturar: hay que operar la app en
+  ese viewport** — abrir cada menú contextual y desplegable (¿caben en
+  pantalla o se recortan?), escribir en cada campo (¿se ve lo que se
+  escribe?), y comprobar que la página no se desplaza horizontalmente
+  (`document.documentElement.scrollWidth > innerWidth` es bug) — controles visibles y de tamaño razonable, textos bien
   escritos, ambos temas si existe conmutador, layout sin roturas en mobile.
   Si el proyecto tiene tests e2e, ejecútalos también. Lo que no puedas
   ejercitar va en "No verificado" para revisión humana, nunca como aprobado.

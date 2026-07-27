@@ -81,6 +81,13 @@ DESIGN.md debe incluir, en este orden:
   - **Identidad mínima**: favicon y título de pestaña se especifican en
     DESIGN.md como entregables, no como detalle opcional.
   - Microcopy con mayúscula inicial en labels y placeholders.
+  - **Validación amable**: un campo obligatorio que el usuario aún no ha
+    completado no muestra error al perder el foco. Los errores aparecen al
+    intentar enviar, y a partir de ahí sí se revalida en vivo mientras
+    corrige. Nadie debe ser regañado por algo que todavía no hizo mal.
+  - **Los atajos de teclado no se estampan sobre los botones**: viven en el
+    tooltip del control y en un panel de ayuda propio. La interfaz principal
+    se mantiene limpia; los atajos son para quien los busca.
 - **Movimiento y micro-interacciones — una UI sin transiciones se siente rota
   aunque funcione.** Define tokens de movimiento (duraciones 150–250 ms,
   easing) y especifica la transición de todo lo que aparece, desaparece o
