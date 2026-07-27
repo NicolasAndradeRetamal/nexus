@@ -24,7 +24,10 @@ cómo se organiza, no qué tecnología se usa (eso ya está decidido).
    En proyectos frontend-only (indicado en su CLAUDE.md) no hay backend propio:
    documenta en su lugar el consumo de la API externa (endpoints, formas de
    respuesta, límites de uso).
-6. Documenta todo en ARCHITECTURE.md en la raíz del proyecto.
+6. Documenta todo en ARCHITECTURE.md en la raíz del proyecto. **Máximo ~500
+   líneas**: tablas y listas en vez de prosa, sin repetir lo que el código ya
+   dice ni copiar firmas completas. Cada agente del equipo lee este documento
+   entero en cada fase; cada línea de más se paga muchas veces.
 
 ARCHITECTURE.md debe incluir, en este orden:
 - **Stack y versiones exactas** — frameworks y dependencias principales.

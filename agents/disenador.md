@@ -42,7 +42,11 @@ audiencia, y ARCHITECTURE.md si existe para conocer las vistas previstas.
    corresponder a una pantalla o ruta prevista en ARCHITECTURE.md; si detectas
    que falta o sobra una pantalla, señálalo en tu respuesta final en vez de
    resolverlo en silencio.
-5. Documenta todo en DESIGN.md en la raíz del proyecto, con los tokens
+5. Documenta todo en DESIGN.md en la raíz del proyecto — **máximo ~600
+   líneas**: tokens en tablas, componentes descritos en pocas líneas cada uno,
+   sin diagramas ASCII largos ni párrafos que repitan lo que la tabla ya dice.
+   Todo el equipo lee este documento completo en cada fase; la extensión se
+   paga en cada lectura. Incluye los tokens
    expresados en la herramienta de estilos del stack (Tailwind por defecto) y
    en la sintaxis de la versión exacta que fijó ARCHITECTURE.md (en Tailwind 4,
    `@theme`; en Tailwind 3, `tailwind.config`).

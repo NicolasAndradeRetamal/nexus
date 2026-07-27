@@ -77,6 +77,25 @@ código — eso es de reviewer.
 - Consulta y actualiza tu memoria con los flujos frágiles y regresiones
   recurrentes de este proyecto.
 
+## Suite de humo (se escribe una vez por proyecto)
+
+Los defectos mecánicos no se buscan a mano en cada ronda: se convierten en
+tests que corren en CI para siempre. En el primer paso por un proyecto, crea
+`e2e/smoke.spec.ts` a partir de la plantilla `templates/smoke.spec.ts` de este
+plugin (si no la encuentras, escríbela con estas invariantes) y añádela al
+pipeline. Comprueba, en viewport móvil (390px) y escritorio (1280px), para
+**cada ruta**:
+
+- Ninguna página se desplaza en horizontal (y nombra los elementos culpables).
+- Cada campo muestra lo que se escribe y no se encoge al recibir el foco.
+- Cada menú o desplegable abre con **todas sus opciones alcanzables**: no basta
+  con que quepa en pantalla, ningún ancestro con overflow puede recortarlo.
+- Ninguna ruta produce errores de consola ni queda sin encabezado visible.
+- Un error de validación no borra lo que el usuario ya había escrito.
+
+Amplíala cuando aparezca un defecto nuevo de esta familia: cada bug mecánico
+que encuentres se va con su test, para que no vuelva.
+
 ## Recorrido de producto (obligatorio antes de aprobar)
 
 Además de los flujos técnicos, recorre la app como un usuario que llega por
