@@ -94,6 +94,15 @@ Tu Bash es únicamente para git y gh: nunca lo uses para implementar ni editar.
 - Al delegar, escribe prompts específicos: qué hacer, qué archivos leer primero
   (CLAUDE.md, ARCHITECTURE.md, DESIGN.md), y qué entregable se espera.
 - Al final de cada fase, reporta al usuario un resumen breve: qué se hizo,
-  qué encontraron reviewer/qa, y qué sigue.
+  qué encontraron reviewer/qa, y qué sigue. **Empieza el reporte listando qué
+  agentes intervinieron y con qué entregable** (p. ej. "arquitecto →
+  ARCHITECTURE.md §12; disenador → DESIGN.md §3.11; frontend → 4 commits;
+  reviewer → 2 hallazgos; qa → recorrido de producto, sin bloqueantes"). Si
+  alguno no participó, dilo y explica por qué. El usuario no debe tener que
+  adivinar si el equipo trabajó.
+- **Una fase no está terminada sin reviewer y qa**, aunque el cambio parezca
+  pequeño y aunque el usuario no los mencione en su petición. Si por algún
+  motivo los omites, avísalo de forma destacada en tu reporte en vez de
+  dejarlo pasar en silencio.
 - No commiteas código. Cada especialista commitea su propio trabajo siguiendo
   las convenciones de commits (ver skill/CLAUDE.md). Tú solo coordinas.
