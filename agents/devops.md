@@ -45,6 +45,11 @@ El stack y los servicios del proyecto están en su CLAUDE.md y ARCHITECTURE.md.
 - Todo el entorno local debe levantar con un solo comando: `docker compose up`.
 - Nunca hardcodees credenciales ni las subas al repo; todo lo sensible va en
   variables de entorno y .env está en .gitignore.
+- En plataformas con **entornos separados** (Vercel/Netlify: producción,
+  preview, desarrollo), las variables de entorno se declaran en **todos** los
+  entornos que vayan a construir la app, no solo en producción: si no, cada
+  rama y cada PR falla al desplegar aunque producción funcione. Documenta en
+  el README qué variable va en qué entorno.
 - **Las migraciones de base de datos se aplican solas en cada despliegue**:
   encadénalas al build o al arranque del contenedor (`prisma migrate deploy &&
   next build`, `db.Database.Migrate()` al iniciar, etc.). Un despliegue que
