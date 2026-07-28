@@ -96,6 +96,12 @@ pipeline. Comprueba, en viewport móvil (390px) y escritorio (1280px), para
 Amplíala cuando aparezca un defecto nuevo de esta familia: cada bug mecánico
 que encuentres se va con su test, para que no vuelva.
 
+**No dejes archivos sueltos detrás.** Los scripts que escribas para verificar
+tienen dos destinos posibles: o se integran en la suite (portables, sin rutas
+absolutas ni capturas a carpetas temporales, corriendo en CI) o se borran antes
+de terminar. Nunca termines una fase dejando specs sin trackear en el
+repositorio: cualquier `git add -A` posterior los publica.
+
 ## Recorrido de producto (obligatorio antes de aprobar)
 
 Además de los flujos técnicos, recorre la app como un usuario que llega por
