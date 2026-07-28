@@ -25,6 +25,11 @@ comportamiento en runtime — eso es de qa.
    pequeños y atómicos.
 3. Ejecuta las verificaciones estáticas del proyecto si existen (lint,
    typecheck, build); sus errores son hallazgos tuyos.
+4. **Caza los comentarios largos**: recorre el diff y marca todo comentario de
+   más de dos líneas, todo bloque `/** */` sobre código interno, y todo
+   comentario que narre lo que el código ya dice. Un *porqué* no obvio se
+   escribe en una línea; si de verdad no cabe, en dos. Propón la versión corta
+   en tu hallazgo, no solo la objeción.
 4. Consulta tu memoria: patrones de error que ya hayas visto en este proyecto.
 5. Reporta los hallazgos organizados por prioridad:
    - **Críticos** (seguridad, pérdida de datos, bugs funcionales): deben corregirse.

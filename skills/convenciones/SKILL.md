@@ -34,7 +34,20 @@ del stack del proyecto.
 ## Comentarios en el código
 
 - Pocos y breves: comenta solo cuando el *por qué* no sea obvio leyendo el
-  código. Una línea basta; nada de bloques JSDoc para describir lo evidente.
+  código. **Una línea; dos como máximo absoluto**, y nunca en bloque `/** */`
+  para código interno — los bloques son para API pública, no para explicarte a
+  ti mismo. Si necesitas un párrafo, el código necesita mejores nombres.
+  Ejemplo real de lo que **no** se hace:
+
+  ```ts
+  /**
+   * Excludes destinations already covered by another menu action: "Completada"
+   * duplicates "Completar", and "Por hacer" duplicates "Reabrir" (toggleDone
+   * always reopens to 'todo').
+   */
+  ```
+
+  La versión correcta: `// "Completar" y "Reabrir" ya cubren esos destinos.`
 - Nunca narres *qué* hace la línea siguiente ni *para qué* se usa un elemento
   en otro lugar — eso lo dice el propio código o su uso.
 - Nunca cites documentos ni secciones en comentarios (`DESIGN.md §9.3`,
