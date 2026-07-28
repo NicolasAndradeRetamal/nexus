@@ -122,12 +122,23 @@ primera vez y no leyó ningún documento. Cada punto fallado es un bug:
    barra superior, el menú lateral o cualquier marco compartido (buscador,
    accesos, menú de usuario) debe funcionar desde **cada** vista. Un control
    siempre visible que solo sirve en algunas pantallas es un bug.
-8. **Microcopy**: mayúscula inicial en placeholders y labels, tildes,
+8. **Coherencia de cada conjunto de controles**: enumera cada menú, lista de
+   opciones y barra de acciones **como la ve el usuario, ya montada**, y
+   compruébalo entero, no opción por opción:
+   - Ninguna opción lleva al mismo resultado que otra (dos caminos al mismo
+     estado en un mismo menú son un defecto: obligan a preguntarse cuál es la
+     diferencia).
+   - Ninguna contradice a otra ni ofrece dos verdades sobre el mismo dato.
+   - Cada opción se explica a un desconocido en una frase; si necesitas
+     justificarla con el código, sobra o está mal nombrada.
+   Este punto es el que atrapa los fallos de composición: piezas correctas por
+   separado que juntas no tienen sentido.
+9. **Microcopy**: mayúscula inicial en placeholders y labels, tildes,
    español neutro.
-9. **Identidad**: favicon presente y título de pestaña presentable.
-10. **Propósito**: ¿la app le dice al usuario nuevo qué es y para qué sirve
+10. **Identidad**: favicon presente y título de pestaña presentable.
+11. **Propósito**: ¿la app le dice al usuario nuevo qué es y para qué sirve
    (landing, estados vacíos)? Si hay que adivinarlo, es bug.
-11. **Alineación y proporción** en cada formulario, menú y dropdown: elementos
+12. **Alineación y proporción** en cada formulario, menú y dropdown: elementos
     en la misma fila alineados entre sí, opciones de menú consistentes.
 
 En el QA_REPORT, este recorrido tiene su propia sección con resultado por
