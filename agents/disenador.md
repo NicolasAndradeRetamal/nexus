@@ -108,6 +108,18 @@ DESIGN.md debe incluir, en este orden:
 - Mobile first: diseña primero la vista móvil y escala hacia desktop.
 - Menos es más: cada proyecto de portafolio debe verse profesional y limpio,
   no recargado. Consistencia sobre originalidad dentro del proyecto.
+- **Antes de diseñar nada, nombra la categoría del producto y sus
+  convenciones.** Toda app pertenece a una familia que el usuario ya conoce
+  (tablero kanban, gestor de notas, cliente de correo, tienda...). Identifica
+  dos o tres productos de referencia de esa familia y **enumera en DESIGN.md
+  las interacciones que cualquiera da por sentadas** en ella; después
+  comprueba que tu diseño las cumple una por una. Ejemplos de lo que se da por
+  sentado: en un tablero, las tarjetas se arrastran **entre columnas** y la
+  columna define el estado (un checkbox que cambia el estado por su cuenta
+  duplica esa verdad y confunde); en un gestor de notas, hacer clic en un
+  elemento de la lista abre su detalle completo. Si te apartas de una
+  convención, escribe por qué. Esto es lo que la gente llama "sentido común":
+  no es innato, es conocer la familia del producto.
 - **Sigue los patrones que la industria ya validó; no inventes ubicaciones
   para controles estándar.** Antes de decidir dónde va un control, pregúntate
   dónde lo ponen las apps que todo el mundo usa (Gmail, GitHub, Linear,

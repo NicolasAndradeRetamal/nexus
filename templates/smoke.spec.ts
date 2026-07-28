@@ -142,6 +142,34 @@ for (const [nombre, viewport] of Object.entries(VIEWPORTS)) {
   });
 }
 
+for (const [nombre, viewport] of Object.entries(VIEWPORTS)) {
+  test.describe(`${nombre} — contenido largo`, () => {
+    test.use({ viewport });
+
+    test('una palabra muy larga no rompe ningún contenedor', async ({ page }) => {
+      await irA(page, ROUTES[0]!);
+      // Texto sin espacios: el caso que revienta cajas mal configuradas.
+      const palabrota = 'Interminable'.repeat(12);
+      const campo = page.locator('textarea:visible, input[type=text]:visible').first();
+      if (await campo.count()) {
+        await campo.fill(palabrota);
+        await page.waitForTimeout(300);
+      }
+      const desbordes = await page.evaluate(() =>
+        [...document.querySelectorAll('div, section, article, dialog, p')]
+          .filter((e) => {
+            const est = getComputedStyle(e);
+            if (est.overflowX === 'auto' || est.overflowX === 'scroll') return false;
+            return e.scrollWidth > e.clientWidth + 1 && e.clientWidth > 0;
+          })
+          .slice(0, 5)
+          .map((e) => `${e.tagName.toLowerCase()}.${(e.className || '').toString().slice(0, 30)}`),
+      );
+      expect(desbordes, `contenedores desbordados: ${desbordes.join(', ')}`).toEqual([]);
+    });
+  });
+}
+
 test.describe('formularios', () => {
   test('un error de validación no borra lo que el usuario escribió', async ({ page }) => {
     // Adaptar: ruta del formulario, campos a rellenar y el error que se provoca.
