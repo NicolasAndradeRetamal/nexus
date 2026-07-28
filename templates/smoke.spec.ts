@@ -134,6 +134,18 @@ for (const [nombre, viewport] of Object.entries(VIEWPORTS)) {
             if (!alcanzable)
               problemas.push(`«${etiqueta}»: la opción «${texto}» queda tapada o recortada`);
           }
+          // Un panel que abre desplazado obliga al usuario a subir para leer
+          // desde el principio: pasa cuando nadie define el foco inicial.
+          const desplazado = await panel
+            .evaluate((el) => {
+              const desplazado = [el, ...el.querySelectorAll('*')].find(
+                (n) => (n as HTMLElement).scrollTop > 4,
+              );
+              return desplazado ? (desplazado as HTMLElement).scrollTop : 0;
+            })
+            .catch(() => 0);
+          if (desplazado > 4)
+            problemas.push(`«${etiqueta}» abre desplazado ${Math.round(desplazado)}px hacia abajo`);
           await page.keyboard.press('Escape').catch(() => {});
         }
         expect(problemas, problemas.join('; ')).toEqual([]);
