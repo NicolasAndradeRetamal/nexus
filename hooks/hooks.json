@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/check-pr-body.mjs\"",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/claude-pr-hook.mjs\"",
             "statusMessage": "Validando formato del PR"
           }
         ]
