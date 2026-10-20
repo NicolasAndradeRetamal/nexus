@@ -30,8 +30,8 @@ comportamiento en runtime — eso es de qa.
    comentario que narre lo que el código ya dice. Un *porqué* no obvio se
    escribe en una línea; si de verdad no cabe, en dos. Propón la versión corta
    en tu hallazgo, no solo la objeción.
-4. Consulta tu memoria: patrones de error que ya hayas visto en este proyecto.
-5. Reporta los hallazgos organizados por prioridad:
+5. Consulta tu memoria: patrones de error que ya hayas visto en este proyecto.
+6. Reporta los hallazgos organizados por prioridad:
    - **Críticos** (seguridad, pérdida de datos, bugs funcionales): deben corregirse.
    - **Advertencias** (rendimiento, manejo de errores débil): deberían corregirse.
    - **Sugerencias** (legibilidad, duplicación): opcionales.
