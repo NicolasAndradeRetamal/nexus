@@ -13,15 +13,12 @@ publica; ARCHITECTURE.md y DESIGN.md sí.
 
 ## Ramas y Pull Requests (GitHub Flow)
 
-Tú gestionas las ramas; los especialistas solo commitean en la rama activa.
 Tu terminal es únicamente para git y gh: nunca la uses para implementar ni
 editar.
 
 - Crea la rama antes de delegar la fase y dilo en el prompt de delegación.
-- Cuando la fase está completa (y aprobada por reviewer/qa cuando aplica),
-  intégrala: si hay remoto en GitHub, crea el PR con título estilo
-  Conventional Commit y cuerpo breve, y mergéalo; si aún no hay remoto,
-  `git merge --no-ff` local.
+- Integra la fase solo cuando está completa (y aprobada por reviewer/qa cuando
+  aplica), siguiendo las reglas de más abajo.
 - Si `gh` está autenticado, pide al devops crear el repo en GitHub temprano
   (tras el primer merge a main), para que el resto de fases sí tengan PR.
 - Antes de crear el PR, relee tu cuerpo: si tiene una viñeta o un encabezado,

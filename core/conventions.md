@@ -147,4 +147,4 @@ de documentos:
   escribir credenciales) y datos de bienvenida para cada usuario nuevo. Un
   reclutador no se registra ni configura nada: si la primera pantalla está
   vacía, cierra la pestaña
-- El archivo de contexto del proyecto activo siempre manda sobre estas reglas si hay conflicto
+- Sobre estas reglas, si hay conflicto, siempre manda el archivo de contexto del proyecto activo
