@@ -1,6 +1,6 @@
 {
   "name": "nexus",
-  "description": "Equipo de agentes especializados y HUD estilo Starcraft para Claude Code",
+  "description": "Equipo de agentes especializados para Claude Code",
   "owner": {
     "name": "Nicolás Andrade",
     "email": "nicolasandraderetamal@hotmail.com"
@@ -9,7 +9,7 @@
     {
       "name": "nexus",
       "source": "./",
-      "description": "Equipo de agentes especializados + HUD de sesión estilo Starcraft"
+      "description": "Equipo de agentes especializados"
     }
   ]
 }

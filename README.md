@@ -66,13 +66,7 @@ minúscula, sin punto y de hasta 50 caracteres.
 ## Adaptador: Claude Code
 
 Plugin de [Claude Code](https://code.claude.com) con el equipo de agentes, la
-skill `convenciones`, un hook que valida los PR y un HUD de sesión inspirado en
-Starcraft.
-
-```
-⚡ Archon [Fable 5] ✦  🪐 gestor-gastos  🌿 main  ⌖ orquestador
-▰▰▰▰▰▱▱▱▱▱ 104k/200k (52%)  💎 $1.23  ⛽ 5h:24% 7d:41%  ⏱ 1h13m  ⚔ +156/-23
-```
+skill `convenciones` y un hook que valida los PR.
 
 ### Instalación
 
@@ -96,28 +90,6 @@ agentes se invocan como `nexus:<nombre>`.
 
 Los archivos generados se commitean: `claude plugin install` instala lo que hay
 en el repo y no ejecuta el build.
-
-### HUD Starcraft (`scripts/` + `settings.json`)
-
-Status line con: modelo como unidad Protoss, uso de contexto como *supply*
-(con alerta "YOU MUST CONSTRUCT ADDITIONAL PYLONS" al 90%), costo como
-minerales, límites de uso como gas vespeno, rama git, reloj de partida y
-líneas cambiadas.
-
-- `statusline.mjs` — multiplataforma (requiere Node), usado por defecto.
-- `statusline.ps1` — versión PowerShell equivalente para Windows sin Node:
-
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "powershell -NoProfile -File <ruta-al-plugin>/scripts/statusline.ps1"
-  }
-}
-```
-
-Si tienes un `statusLine` propio en `~/.claude/settings.json`, ese tiene
-prioridad sobre el del plugin.
 
 ## Próximamente
 
