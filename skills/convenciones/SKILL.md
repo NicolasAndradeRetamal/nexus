@@ -25,7 +25,7 @@ del stack del proyecto.
 - **Casing según el gestor**: en PostgreSQL (el de los proyectos con BD hoy),
   snake_case → tablas/columnas y los campos genéricos `created_at`, `updated_at`,
   `active`. Con otro gestor u ORM, usa la convención idiomática de esa tecnología;
-  el `CLAUDE.md` del proyecto la fija y manda.
+  el CLAUDE.md del proyecto la fija y manda.
 - Ojo con las capas: el **esquema físico** sigue la convención de la BD; el
   **código y las entidades del ORM** siguen el idioma del lenguaje (C# PascalCase,
   TS camelCase); los **DTOs/JSON** de la API siguen el suyo (normalmente
@@ -71,24 +71,38 @@ Ejemplo: `feat: add login rate limiting`
 
 ## Ramas y Pull Requests (GitHub Flow)
 
-- `main` siempre estable y desplegable; solo recibe el commit inicial y merges.
-- Todo lo demás en ramas cortas desde `main`: `feat/<slug>`, `fix/<slug>`,
-  `docs/<slug>`, `chore/<slug>` (slug corto en inglés, kebab-case).
-- Una rama = una fase o feature; se integra vía Pull Request mergeado con
-  merge normal — nunca squash, los commits atómicos son parte del historial
-  que se quiere mostrar.
-- **El título del PR va en inglés**, mismo formato que un commit
-  (`tipo: asunto en imperativo`, minúscula, sin punto). El cuerpo sí va en
-  español, como el resto de la documentación del repo.
-- El cuerpo del PR: **una a tres frases en lenguaje llano** — qué cambia y por
-  qué. El diff habla por sí solo; el cuerpo solo da el contexto que el diff no
-  muestra. Prohibido: citar secciones de documentos (`§`, "DESIGN.md §3.1"),
-  jerga académica, y pegar resultados de builds/tests/verificaciones (eso vive
-  en la CI y en el reporte del agente, no en el PR).
-  Ejemplo bueno: "Mueve el conmutador de tema al menú de usuario y corrige el
-  tamaño de los botones de icono, que quedaban demasiado pequeños."
+- `main` siempre estable y desplegable. El commit inicial (scaffolding,
+  .gitignore) va directo a `main`; todo lo demás llega por merge.
+- Todo lo demás en ramas cortas creadas desde `main` actualizado, una por fase
+  o feature: `feat/<slug>`, `fix/<slug>`, `docs/<slug>`, `chore/<slug>` (slug
+  corto en inglés, kebab-case).
+- **Todo PR apunta a `main`**: usa `--base main` explícito al crearlo y
+  verifica la base en el resultado. Nunca abras un PR contra otra rama de
+  trabajo: si la fase anterior aún no fue mergeada, espera ese merge antes de
+  crear la rama nueva. Un PR mergeado contra una rama lateral deja los cambios
+  varados fuera de `main` y del deploy.
+- Se integra vía Pull Request con merge normal (`gh pr merge --merge
+  --delete-branch`), nunca squash: los commits atómicos son parte del historial
+  que se quiere mostrar. Sin remoto en GitHub: `git merge --no-ff` local. Tras
+  integrar, borra también la rama local (`git branch -d`): las ramas viven lo
+  que vive su PR.
 - El orquestador crea las ramas y mergea los PRs; los especialistas solo
-  commitean en la rama activa. Sin remoto en GitHub: `git merge --no-ff` local.
+  commitean en la rama activa.
+- **El título del PR va en inglés**, mismo formato que un commit
+  (`tipo: asunto en imperativo`, minúscula, sin punto). Es parte del historial
+  del repo, no comunicación con el usuario.
+- **El cuerpo del PR va en español y tiene un formato duro: máximo tres frases
+  corridas y 60 palabras**, en lenguaje llano — qué cambia y por qué; el
+  detalle vive en los commits y el diff. Sin listas, sin encabezados, sin
+  secciones. Prohibido: citar secciones de documentos (`§`, "DESIGN.md §3.1"),
+  jerga académica, desglose por capas (Backend/Frontend/Tests) y resultados de
+  builds, tests o verificaciones (eso vive en la CI y en el reporte del agente).
+  Ejemplo: "Agrega presupuestos mensuales por categoría con barras de progreso
+  y alertas al 80% y al superar el límite. Migración aditiva, no toca datos
+  existentes."
+- Un validador automático rechaza el PR que viole este formato, con el motivo.
+  Si rechaza, reescribe el cuerpo desde cero según el ejemplo; no negocies con
+  el validador.
 
 ## Gestor de paquetes JS/TS
 
@@ -108,12 +122,12 @@ Ejemplo: `feat: add login rate limiting`
 Los repos de proyecto son públicos y funcionan como portafolio. Hay dos clases
 de documentos:
 
-- **Internos** (no se suben; van en el .gitignore inicial): `CLAUDE.md`,
+- **Internos** (no se suben; van en el .gitignore inicial): el CLAUDE.md del proyecto,
   `QA_REPORT.md` y `.claude/`. Siguen existiendo en el disco y el equipo los
   usa con normalidad; simplemente no viajan en el repo.
 - **Públicos** (sí se suben): `README.md`, `ARCHITECTURE.md`, `DESIGN.md`.
   Escríbelos para un lector externo: hablan de la implementación y sus
-  decisiones, nunca del proceso — sin mencionar agentes, IA, CLAUDE.md ni
+  decisiones, nunca del proceso — sin mencionar agentes, IA, el CLAUDE.md del proyecto ni
   QA_REPORT.md, y sin frases como "el agente frontend implementará".
 
 ## Interoperabilidad
@@ -133,4 +147,4 @@ de documentos:
   escribir credenciales) y datos de bienvenida para cada usuario nuevo. Un
   reclutador no se registra ni configura nada: si la primera pantalla está
   vacía, cierra la pestaña
-- El CLAUDE.md del proyecto activo siempre manda sobre estas reglas si hay conflicto
+- Sobre estas reglas, si hay conflicto, siempre manda el CLAUDE.md del proyecto activo

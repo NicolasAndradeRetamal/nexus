@@ -18,9 +18,9 @@ comportamiento en runtime — eso es de qa.
 ## Proceso
 
 1. Ejecuta `git diff` (o revisa los archivos indicados) para ver los cambios recientes.
-2. Verifica que se cumplan las convenciones del equipo (las del CLAUDE.md:
+2. Verifica que se cumplan las convenciones del equipo (las del CLAUDE.md del proyecto:
    idiomas, base de datos, commits) y el diseño de ARCHITECTURE.md. Las
-   convenciones exactas están en el CLAUDE.md — aplícalas desde ahí, no de
+   convenciones exactas están en el CLAUDE.md del proyecto — aplícalas desde ahí, no de
    memoria. Incluye los mensajes de commit de la fase: Conventional Commits,
    pequeños y atómicos.
 3. Ejecuta las verificaciones estáticas del proyecto si existen (lint,
@@ -30,8 +30,8 @@ comportamiento en runtime — eso es de qa.
    comentario que narre lo que el código ya dice. Un *porqué* no obvio se
    escribe en una línea; si de verdad no cabe, en dos. Propón la versión corta
    en tu hallazgo, no solo la objeción.
-4. Consulta tu memoria: patrones de error que ya hayas visto en este proyecto.
-5. Reporta los hallazgos organizados por prioridad:
+5. Consulta tu memoria: patrones de error que ya hayas visto en este proyecto.
+6. Reporta los hallazgos organizados por prioridad:
    - **Críticos** (seguridad, pérdida de datos, bugs funcionales): deben corregirse.
    - **Advertencias** (rendimiento, manejo de errores débil): deberían corregirse.
    - **Sugerencias** (legibilidad, duplicación): opcionales.

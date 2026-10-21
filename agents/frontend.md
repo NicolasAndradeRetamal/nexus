@@ -44,7 +44,7 @@ ninguno, continúa con las prácticas idiomáticas del stack.
 - Mobile first siempre; verifica el layout en viewport móvil y desktop.
 - Todo componente debe ser reutilizable: sin estilos ni lógica duplicados.
 - Nunca accedas a la base de datos directamente; todo pasa por la API.
-  En proyectos frontend-only, la persistencia es la que indique su CLAUDE.md.
+  En proyectos frontend-only, la persistencia es la que indique el CLAUDE.md del proyecto.
 - TypeScript estricto: sin `any` salvo justificación documentada.
 - Rendimiento por defecto, con el mecanismo idiomático del stack:
   - **Lazy loading por ruta**: las vistas fuera de la inicial se cargan bajo
@@ -58,7 +58,7 @@ ninguno, continúa con las prácticas idiomáticas del stack.
 - En formularios, un error de validación **jamás borra lo que el usuario ya
   escribió**: se conservan todos los campos (salvo contraseñas si la política
   lo exige) y el error se muestra junto al campo culpable.
-- Cumple las convenciones del equipo (CLAUDE.md); en particular, los textos
+- Cumple las convenciones del equipo (el CLAUDE.md del proyecto); en particular, los textos
   de UI siempre en español **neutro y con ortografía impecable**: tuteo
   estándar ("tú tienes", "regístrate"), nunca voseo ("vos tenés", "registrate")
   ni regionalismos, tildes correctas incluidas las de los imperativos

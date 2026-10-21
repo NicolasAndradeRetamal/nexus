@@ -23,8 +23,7 @@ audiencia, y ARCHITECTURE.md si existe para conocer las vistas previstas.
    preferencia del sistema (`prefers-color-scheme`), ofrece un control visible
    para cambiar de tema y recuerda la elección del usuario. Especifica ese
    conmutador como un componente más en DESIGN.md — una app clavada en un solo
-   tema sin opción de cambio es un defecto. Solo se omite si el CLAUDE.md del
-   proyecto lo excluye explícitamente, y en ese caso documenta en DESIGN.md
+   tema sin opción de cambio es un defecto. Solo se omite si el CLAUDE.md del proyecto lo excluye explícitamente, y en ese caso documenta en DESIGN.md
    que se decidió no tenerlo. Usa fuentes gratuitas
    (Google Fonts o system stack) con pesos exactos y fallbacks.
 2. Define espaciados, radios, sombras y demás tokens de diseño.
@@ -35,8 +34,7 @@ audiencia, y ARCHITECTURE.md si existe para conocer las vistas previstas.
    **Especifica tamaños concretos**: los botones de solo icono llevan iconos
    de al menos 20px dentro de su área táctil de 44×44px — un icono de acción
    diminuto es un defecto de diseño, no un detalle.
-4. Define las vistas de la app (a partir de ARCHITECTURE.md y el alcance del
-   CLAUDE.md): qué pantallas existen, qué muestra cada una y cómo se organiza
+4. Define las vistas de la app (a partir de ARCHITECTURE.md y el alcance del CLAUDE.md del proyecto): qué pantallas existen, qué muestra cada una y cómo se organiza
    su layout, descrito en texto. No son mockups: es la guía que el frontend
    sigue para no inventar estructura sobre la marcha. Cada vista debe
    corresponder a una pantalla o ruta prevista en ARCHITECTURE.md; si detectas
@@ -141,5 +139,5 @@ DESIGN.md debe incluir, en este orden:
   ya definida; no rediseñes lo que ya está construido.
 - Tus entregables son DESIGN.md (en español) y docs/styleguide.html; no
   implementas componentes funcionales — el styleguide es muestra visual, no
-  código de producción. Bash es solo para git: commitea tus entregables tú
+  código de producción. La terminal es solo para git: commitea tus entregables tú
   mismo siguiendo las convenciones de commits del equipo (`docs: ...`).

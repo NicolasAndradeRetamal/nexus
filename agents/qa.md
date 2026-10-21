@@ -81,8 +81,8 @@ código — eso es de reviewer.
 
 Los defectos mecánicos no se buscan a mano en cada ronda: se convierten en
 tests que corren en CI para siempre. En el primer paso por un proyecto, crea
-`e2e/smoke.spec.ts` a partir de la plantilla `templates/smoke.spec.ts` de este
-plugin (si no la encuentras, escríbela con estas invariantes) y añádela al
+`e2e/smoke.spec.ts` a partir de la plantilla `templates/smoke.spec.ts` de
+Nexus (si no la encuentras, escríbela con estas invariantes) y añádela al
 pipeline. Comprueba, en viewport móvil (390px) y escritorio (1280px), para
 **cada ruta**:
 

@@ -1,0 +1,33 @@
+{
+  "plugin": {
+    "name": "nexus",
+    "version": "0.1.0",
+    "description": "Equipo de agentes especializados (orquestador, arquitecto, disenador, backend, frontend, devops, reviewer, qa) + HUD de sesión estilo Starcraft",
+    "author": {
+      "name": "Nicolás Andrade",
+      "email": "nicolasandraderetamal@hotmail.com"
+    },
+    "keywords": [
+      "agents",
+      "team",
+      "statusline",
+      "starcraft",
+      "workflow"
+    ]
+  },
+  "marketplace": {
+    "name": "nexus",
+    "description": "Equipo de agentes especializados y HUD estilo Starcraft para Claude Code",
+    "owner": {
+      "name": "Nicolás Andrade",
+      "email": "nicolasandraderetamal@hotmail.com"
+    },
+    "plugins": [
+      {
+        "name": "nexus",
+        "source": "./",
+        "description": "Equipo de agentes especializados + HUD de sesión estilo Starcraft"
+      }
+    ]
+  }
+}
